@@ -60,13 +60,13 @@ li {
     padding: 1rem 3rem;
     background-color: var(--green);
     columns: var(--white);
-    border-radius: 10px;
+    border-radius: 1rem;
+    color: var(--white);
 }
 
 .btn:hover {
     cursor: pointer;
     font-weight: bold;
-    color: #222;
 }
 
 /* ========= HAEDER ========= */
@@ -709,5 +709,88 @@ transform: scale(1.1);
 
     .banner .right img {
         width: 42rem;
+    }
+}
+
+/* ========== Contact ========== */
+
+.contact {
+    background-color: #222;
+    color: var(--white);
+    padding: 10rem 20rem;
+}
+
+.contact .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.contact .row .col h2 {
+    margin-bottom: 1.5rem;
+}
+
+.contact .row .col p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    width: 70%;
+}
+
+.contact form div {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contact form input {
+    font-family: "poppins", sans-serif;
+    text-indent: 2rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1.5rem 0;
+    outline: none;
+    border: none;
+}
+
+.contact form a {
+    position: absolute;
+    right: 5px;
+    top:5px;
+    bottom: 5px;
+    text-align: center;
+}
+
+.btn-send {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 996px) {
+    .contact {
+        padding: 8rem;
+    }
+
+    .contact .row {
+        grid-template-columns: 1fr;
+        gap: 5rem 0;
+    }
+
+    .contact form div{
+        width: 100%;
+    }
+}
+
+@media (max-width: 567px) {
+    .contact {
+        padding: 8rem 1rem;
+    }
+
+    .contact .row {
+        grid-template-columns: 1fr;
+        gap: 5rem 0;
+    }
+
+    .contact form div{
+        width: 100%;
     }
 }
