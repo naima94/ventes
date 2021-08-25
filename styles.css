@@ -55,6 +55,20 @@ li {
     overflow: hidden;
 }
 
+.btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--green);
+    columns: var(--white);
+    border-radius: 10px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    font-weight: bold;
+    color: #222;
+}
+
 /* ========= HAEDER ========= */
 .header {
     position: relative;
@@ -230,13 +244,11 @@ li {
     margin: 0 0 1rem;
 }
 
-.hero .left .hero-btn {
-    display: inline-block;
-    padding: 1rem 3rem;
+/*.hero .left .hero-btn {
     font-size: 1.6rem;
     background-color: var(--green);
     columns: var(--white);
-}
+}*/
 
 .hero .right {
     flex: 0 0 50%;
@@ -585,4 +597,117 @@ transform: scale(1.1);
         font-size: 1.8rem;
     }
 
+}
+
+/* ========== PROMO ========== */
+
+.banner {
+    position: relative;
+    background-color: var(--grey2);
+    padding: 14rem;
+}
+
+.banner .trend,
+.banner p {
+    display: block;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.banner h1 {
+    font-size: 5.4rem;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+}
+
+.banner .btn-1 {
+    margin-top: 2rem;
+}
+
+.banner .right img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 75rem; 
+}
+
+@media (max-width: 1200px) {
+    .banner {
+        padding: 14rem 2rem;
+    }
+
+    .banner .right img {
+        right: -6%;
+        width: 70rem;
+    }
+}
+
+@media (max-width: 996px) {
+    .banner {
+        padding: 8rem 2rem;
+    }
+
+    .banner .trend,
+    .banner p {
+        font-size: 1.5rem;
+    }
+
+    .banner h1 {
+        font-size: 4rem;
+    }
+
+    .banner .right img {
+        right: -4%;
+        width: 50rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        display: grid;
+        grid-template-columns: 1fr;
+        height: 80vh;
+    }
+
+    .banner .left {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
+
+    .banner .right {
+        flex: 0 0 50%;
+    }
+
+    .banner .right img {
+        right: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 567px) {
+    .banner {
+        padding: 8rem 5rem;
+    }
+
+    .banner .trend,
+    .banner p {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .banner h1 {
+        font-size: 2.2rem;
+        margin-bottom: 1rem;
+    }
+
+    .banner .btn-1 {
+        padding: 1rem 1.8rem;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    .banner .right img {
+        width: 42rem;
+    }
 }
