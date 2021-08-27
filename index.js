@@ -9,7 +9,7 @@ if (hamburger) {
 
 // Popup
 const popup = document.querySelector(".popup");
-const closePopup = document.querySelector("popup-close");
+const closePopup = document.querySelector(".popup-close");
 
 if (popup) {
     closePopup.addEventListener("click", () => {
