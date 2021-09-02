@@ -822,6 +822,7 @@ footer .row {
     font-size: 2.5rem;
     margin-right: .5rem;
     color: var(--white);
+    cursor: pointer;
 }
 
 .footer .col a {
