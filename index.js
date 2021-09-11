@@ -22,3 +22,29 @@ if (popup) {
         }, 1000);
     });
 }
+
+// Contact form handling with VueJS
+var row = new Vue({
+    el: '#row',
+    data: {
+        title: 'EXCELLENT SUPPORT',
+        form: {
+            email: ""
+        }
+    },
+
+    methods: {
+        SendMail() {
+            axios
+                .post("https://getform.io/f/ea28d0b0-34c8-42d3-bd4d-b46505674eb8", {
+                    email: this.form.email,
+                })
+                .then(response => {
+                    console.log(response);
+                    alert("Your email has been sent");
+                    this.$refs.myform.resetFields();
+                })
+                .catch(error => console.log(error))
+        }
+    }
+})
