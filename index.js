@@ -35,6 +35,7 @@ var row = new Vue({
 
     methods: {
         SendMail() {
+
             axios
                 .post("https://getform.io/f/ea28d0b0-34c8-42d3-bd4d-b46505674eb8", {
                     email: this.form.email,
@@ -42,7 +43,7 @@ var row = new Vue({
                 .then(response => {
                     console.log(response);
                     alert("Your email has been sent");
-                    this.$refs.myform.resetFields();
+                    this.form.email = "";
                 })
                 .catch(error => console.log(error))
         }
